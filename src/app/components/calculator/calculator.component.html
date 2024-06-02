@@ -1,0 +1,120 @@
+<div class="calculatorForm box">
+  <div class="wrapper">
+    <div class="wrapper__inputs">
+      <div class="wrapper__input">
+        <div class="control">
+          <label for="is-yellow">Epic</label>
+          <input
+            class="input is-yellow"
+            id="is-yellow"
+            min="0"
+            type="number"
+            placeholder="Link input"
+            [(ngModel)]="goldenValue"
+          />
+        </div>
+        <div class="control">
+          <label for="is-violet">Excellent</label>
+          <input
+            class="input is-violet"
+            id="is-violet"
+            min="0"
+            type="number"
+            placeholder="Link input"
+            [(ngModel)]="violetValue"
+          />
+        </div>
+        <div class="control">
+          <label for="is-blue">Better</label>
+          <input
+            class="input is-blue"
+            id="is-blue"
+            min="0"
+            type="number"
+            placeholder="Link input"
+            [(ngModel)]="blueValue"
+          />
+        </div>
+      </div>
+      <div class="wrapper__input">
+        <div class="control">
+          <label for="is-yellow">Epic +1</label>
+          <input
+            class="input is-yellow"
+            id="is-yellow"
+            min="0"
+            type="number"
+            placeholder="Link input"
+            [(ngModel)]="gold1Value"
+          />
+        </div>
+        <div class="control">
+          <label for="is-violet">Excellent +1</label>
+          <input
+            class="input is-violet"
+            id="is-violet"
+            min="0"
+            type="number"
+            placeholder="Link input"
+            [(ngModel)]="violet1Value"
+          />
+        </div>
+      </div>
+      <div class="wrapper__input">
+        <div class="control">
+          <label for="is-yellow">Epic +2</label>
+          <input
+            class="input is-yellow"
+            id="is-yellow"
+            min="0"
+            type="number"
+            placeholder="Link input"
+            [(ngModel)]="gold2Value"
+          />
+        </div>
+        <div class="control">
+          <label for="is-violet">Excellent +2</label>
+          <input
+            class="input is-violet"
+            id="is-violet"
+            min="0"
+            type="number"
+            placeholder="Link input"
+            [(ngModel)]="violet2Value"
+          />
+        </div>
+      </div>
+      <div class="wrapper__input">
+        <div class="control">
+          <label for="is-yellow">Epic +3</label>
+          <input
+            class="input is-yellow"
+            id="is-yellow"
+            min="0"
+            type="number"
+            placeholder="Link input"
+            [(ngModel)]="gold3Value"
+          />
+        </div>
+      </div>
+    </div>
+
+    <button class="button is-primary" type="submit" (click)="calculate()">
+      Calculate
+    </button>
+
+    <input
+      class="input is-danger"
+      type="text"
+      placeholder="Result"
+      [value]="result"
+      readonly
+    />
+  </div>
+
+  <div class="wrapper__missing">
+    <h3>Missing Gold: {{ missingGold }}</h3>
+    <h3>Missing Violet: {{ missingViolet }}</h3>
+    <h3>Missing Blue: {{ missingBlue }}</h3>
+  </div>
+</div>
