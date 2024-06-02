@@ -1,12 +1,5 @@
-$input-border-color: #ff5733;
-$input-color: #ff5733;
-$input-focus-border-color: #c70039;
-$input-focus-box-shadow-color: rgba(199, 0, 57, 0.25);
-
-@import "bulma/bulma";
-
 .calculatorForm {
-  width: max-content;
+  // width: max-content;
   padding: 20px;
 }
 .control {
@@ -18,7 +11,7 @@ $input-focus-box-shadow-color: rgba(199, 0, 57, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: max-content;
+  // width: max-content;
   padding: 20px;
   gap: 40px;
 
@@ -33,16 +26,13 @@ $input-focus-box-shadow-color: rgba(199, 0, 57, 0.25);
   &__inputs {
     display: flex;
     gap: 20px;
-
-    @media (min-width: 860px) {
-      flex-direction: row;
-    }
+    flex-flow: row wrap;
+    width: 100%;
   }
 
   &__input {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
     gap: 20px;
   }
 
