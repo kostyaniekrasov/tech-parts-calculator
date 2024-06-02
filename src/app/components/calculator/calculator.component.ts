@@ -29,15 +29,24 @@ export class CalculatorComponent {
   result = 0;
 
   calculate() {
-    const totalViolet =
-      this.violetValue + this.violet1Value * 2 + this.violet2Value * 4;
+    const {
+      goldenValue,
+      violetValue,
+      blueValue,
+      violet1Value,
+      violet2Value,
+      gold1Value,
+      gold2Value,
+      gold3Value,
+    } = this;
+    const totalViolet = violetValue + violet1Value * 2 + violet2Value * 4;
     const totalGolden =
-      this.goldenValue +
-      this.gold1Value * 2 +
-      this.gold2Value * 4 +
-      this.gold3Value * 8 +
+      goldenValue +
+      gold1Value * 2 +
+      gold2Value * 4 +
+      gold3Value * 8 +
       Math.floor(totalViolet / 8) +
-      Math.floor(this.blueValue / 24);
+      Math.floor(blueValue / 24);
 
     this.result = Math.floor(totalGolden / 16);
 
